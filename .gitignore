@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environments
+.venv/
+backend/.venv/
+venv/
+
+# Env files
+backend/.env
+.env
+
+# Uploaded files & generated data
+data/
+storage/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store

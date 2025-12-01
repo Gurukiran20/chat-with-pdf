@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chat with PDF</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>Chat with PDF</h1>
+      <p>Upload a PDF and ask questions about it in natural language.</p>
+    </header>
+
+    <main class="app-main">
+      <!-- Left: Upload section -->
+      <section class="panel upload-panel">
+        <h2>1. Upload PDF</h2>
+        <form id="uploadForm" class="upload-form">
+          <input type="file" id="pdfFile" accept="application/pdf" />
+          <button type="submit">Upload</button>
+        </form>
+        <div id="uploadStatus" class="status-text"></div>
+      </section>
+
+      <!-- Right: Chat section -->
+      <section class="panel chat-panel">
+        <h2>2. Chat</h2>
+        <div id="chatWindow" class="chat-window">
+          <!-- Messages will be appended here -->
+        </div>
+        <form id="chatForm" class="chat-form">
+          <input
+            type="text"
+            id="userInput"
+            placeholder="Ask something about the uploaded PDF..."
+            autocomplete="off"
+          />
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <span>Built with FastAPI + Gemini + Vanilla JS</span>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../src/api.js"></script>
+  <script src="../src/upload.js"></script>
+  <script src="../src/chat.js"></script>
+</body>
+</html>
